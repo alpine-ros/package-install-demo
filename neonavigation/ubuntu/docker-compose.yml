@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  demo:
+    image: demo-alpine-ros
+    build: .
+    environment:
+      DISPLAY:
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+    devices:
+      - "/dev/dri:/dev/dri"
