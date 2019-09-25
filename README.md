@@ -1,5 +1,5 @@
-# alpine-ros/package-install-demo
-Demonstration to install Alpine ROS packages
+# A demonstration to install Alpine ROS packages
+This live demo was performed at [ROSCon JP 2019](http://roscon.jp/) presentation!
 
 **FIXME: Currently, this demo is setup for Intel graphic accelerator.**
 
@@ -9,7 +9,7 @@ Demonstration to install Alpine ROS packages
     $ cd cd neonavigation/alpine/
     $ docker-compose build
     ```
-3. Enable X11 from Docker container
+3. Enable X11 access from Docker container
     ```
     $ xhost +
     ```

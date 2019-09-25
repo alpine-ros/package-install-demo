@@ -4,6 +4,7 @@ RUN apk add --no-cache \
   ros-${ROS_DISTRO}-neonavigation-launch \
   ros-${ROS_DISTRO}-rviz
 
+# Setup GUI related configs to run from container
 # コンテナ内からGUIを正しく表示するためのおまじない
 RUN apk add --no-cache dbus font-noto mesa-dri-intel \
   && dbus-uuidgen \

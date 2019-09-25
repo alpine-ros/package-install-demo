@@ -1,11 +1,11 @@
 FROM ros:melodic-ros-core
 
+# Use fastest mirror in Japan (for ROSCon JP live demo)
 # 国内のリポジトリを利用するように変更
-RUN sed -e \
-  's|http://archive.ubuntu.com|http://linux.yz.yamagata-u.ac.jp/ubuntu|' \
-  -i /etc/apt/sources.list
+# RUN sed -e \
+#   's|http://archive.ubuntu.com|http://linux.yz.yamagata-u.ac.jp/ubuntu|' \
+#   -i /etc/apt/sources.list
 
-# パッケージインストール
 RUN apt-get update -qq \
   && apt-get install -y --no-install-recommends \
     ros-${ROS_DISTRO}-neonavigation-launch \
@@ -13,6 +13,7 @@ RUN apt-get update -qq \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
+# Setup GUI related configs to run from container
 # コンテナ内からGUIを正しく表示するためのおまじない
 RUN apt-get update -qq \
   && apt-get install -y --no-install-recommends dbus \
