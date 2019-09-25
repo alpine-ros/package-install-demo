@@ -1,6 +1,6 @@
 FROM ros:melodic-ros-core
 
-# Use fastest mirror in Japan (for ROSConJP live demo)
+# Use fastest mirror in Japan (for ROSCon JP live demo)
 # 国内のリポジトリを利用するように変更
 # RUN sed -e \
 #   's|http://archive.ubuntu.com|http://linux.yz.yamagata-u.ac.jp/ubuntu|' \
