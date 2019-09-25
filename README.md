@@ -1,5 +1,5 @@
-# alpine-ros/package-install-demo
-Demonstration to install Alpine ROS packages
+# A demonstration to install Alpine ROS packages
+The live demo was performed at [ROSCon JP 2019](http://roscon.jp/) presentation!
 
 **FIXME: Currently, this demo is setup for Intel graphic accelerator.**
 
