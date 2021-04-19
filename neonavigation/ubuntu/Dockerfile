@@ -1,4 +1,4 @@
-FROM ros:melodic-ros-core
+FROM ros:noetic-ros-core
 
 # Use fastest mirror in Japan (for ROSCon JP live demo)
 # 国内のリポジトリを利用するように変更
@@ -14,7 +14,6 @@ RUN apt-get update -qq \
   && rm -rf /var/lib/apt/lists/*
 
 # Setup GUI related configs to run from container
-# コンテナ内からGUIを正しく表示するためのおまじない
 RUN apt-get update -qq \
   && apt-get install -y --no-install-recommends dbus \
   && dbus-uuidgen \
