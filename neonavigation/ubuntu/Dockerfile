@@ -13,12 +13,4 @@ RUN apt-get update -qq \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-# Setup GUI related configs to run from container
-RUN apt-get update -qq \
-  && apt-get install -y --no-install-recommends dbus \
-  && dbus-uuidgen \
-  && apt-get purge -y dbus \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
-
 CMD roslaunch neonavigation_launch demo.launch
