@@ -10,12 +10,7 @@ RUN apt-get update -qq \
   && apt-get install -y --no-install-recommends \
     ros-${ROS_DISTRO}-neonavigation-launch \
     ros-${ROS_DISTRO}-rviz \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
-
-# Setup GUI related configs to run from container
-RUN apt-get update -qq \
-  && apt-get install -y --no-install-recommends dbus \
+    dbus \
   && dbus-uuidgen \
   && apt-get purge -y dbus \
   && apt-get clean \
