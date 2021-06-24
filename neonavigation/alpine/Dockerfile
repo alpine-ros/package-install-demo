@@ -1,4 +1,4 @@
-FROM ghcr.io/alpine-ros/alpine-ros:noetic-bare
+FROM ghcr.io/alpine-ros/alpine-ros:noetic-3.14-bare
 
 RUN apk add --no-cache \
   ros-${ROS_DISTRO}-neonavigation-launch \
